@@ -1,4 +1,4 @@
-package me.helioalbano.jpaandhibernate;
+package me.helioalbano.springbootlearning.jpaandhibernate;
 
 import java.util.Date;
 
