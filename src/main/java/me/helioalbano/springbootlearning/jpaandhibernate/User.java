@@ -29,6 +29,10 @@ public class User {
 
     private String userName;
     private String firstName;
+
+    @Column(length = 3)
+    private String middleName;
+
     private String lastName;
 
     @Transient
