@@ -1,6 +1,7 @@
 package me.helioalbano.springbootlearning.jpaandhibernate;
 
 import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.PostLoad;
@@ -17,6 +18,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @Data
+@EntityListeners(AuditTrailListener.class)
 @Entity
 public class User {
 
