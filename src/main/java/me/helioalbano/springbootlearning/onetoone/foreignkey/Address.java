@@ -1,0 +1,24 @@
+package me.helioalbano.springbootlearning.onetoone.foreignkey;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import lombok.Data;
+
+@Entity(name = "Address3")
+@Table(name = "address")
+@Data
+public class Address {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    private Long id;
+
+    @OneToOne(mappedBy = "address")
+    private User user;
+}
