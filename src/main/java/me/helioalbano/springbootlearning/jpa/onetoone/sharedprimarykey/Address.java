@@ -1,4 +1,4 @@
-package me.helioalbano.springbootlearning.onetoone.sharedprimarykey;
+package me.helioalbano.springbootlearning.jpa.onetoone.sharedprimarykey;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

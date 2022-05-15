@@ -1,4 +1,4 @@
-package me.helioalbano.springbootlearning.onetoone.jointable;
+package me.helioalbano.springbootlearning.jpa.onetoone.jointable;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;

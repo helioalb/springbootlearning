@@ -1,4 +1,4 @@
-package me.helioalbano.springbootlearning.onetoone.jointable;
+package me.helioalbano.springbootlearning.jpa.onetoone.foreignkey;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,15 +9,14 @@ import javax.persistence.OneToOne;
 
 import lombok.Data;
 
-@Entity
+@Entity(name = "Address3")
 @Data
-public class WorkStation {
-
+public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Long id;
 
-    @OneToOne(mappedBy = "workStation")
-    private Employee employee;
+    @OneToOne(mappedBy = "address")
+    private User user;
 }
