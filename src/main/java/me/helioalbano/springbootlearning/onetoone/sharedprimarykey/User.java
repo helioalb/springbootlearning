@@ -1,6 +1,6 @@
-package me.helioalbano.springbootlearning.onetoone.foreignkey;
+package me.helioalbano.springbootlearning.onetoone.sharedprimarykey;
 
-import javax.persistence.Column;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,14 +9,13 @@ import javax.persistence.OneToOne;
 
 import lombok.Data;
 
-@Entity(name = "Address3")
+@Entity(name = "User4")
 @Data
-public class Address {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
     private Long id;
 
-    @OneToOne(mappedBy = "address")
-    private User user;
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private Address address;
 }
